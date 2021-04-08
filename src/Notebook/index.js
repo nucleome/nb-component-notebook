@@ -87,7 +87,10 @@ var render = (container, el, _state, name, version, dispatch) => {
                 {state.regionList.map((d,i) => {
                     return (<li>
                        <input type="button" value="x" onclick={deleteEntry(i)}></input> 
-                       <span onclick={action(d.regions)} class="entry">{regionsText(d.regions)}</span>
+                        <span onclick={action(d.regions)} class="entry">
+                        <span>No.{i+1}</span>
+                        <span>{regionsText(d.regions)}</span>
+                        </span>
                     </li>)
                 })}
                 </ul>
